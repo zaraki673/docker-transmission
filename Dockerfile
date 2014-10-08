@@ -1,4 +1,4 @@
-FROM zaraki673/supervisord:latest
+FROM zaraki673/docker-supervisord:latest
 
 MAINTAINER Kevin Larsonneur klarsonneur@gmail.com
 

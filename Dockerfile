@@ -1,4 +1,4 @@
-FROM elventear/supervisord:latest
+FROM zaraki673/supervisord:latest
 
 MAINTAINER Pepe Barbe <dev@antropoide.net>
 

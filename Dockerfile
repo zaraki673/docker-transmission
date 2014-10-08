@@ -1,6 +1,6 @@
 FROM zaraki673/supervisord:latest
 
-MAINTAINER Pepe Barbe <dev@antropoide.net>
+MAINTAINER Kevin Larsonneur klarsonneur@gmail.com
 
 RUN apt-get update && \
     apt-get upgrade -y && \

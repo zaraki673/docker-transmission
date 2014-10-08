@@ -13,7 +13,7 @@ RUN add-apt-repository -y ppa:transmissionbt/ppa && \
 ADD files/transmission-daemon /etc/transmission-daemon
 ADD files/run_transmission.sh /run_transmission.sh
 
-RUN chown -R debian-transmission: /var/lib/transmission-daemon && \
+RUN chmod +x /run_transmission.sh && chown -R debian-transmission: /var/lib/transmission-daemon && \
     chown -R debian-transmission: /etc/transmission-daemon    
 
 VOLUME ["/var/lib/transmission-daemon/downloads"]

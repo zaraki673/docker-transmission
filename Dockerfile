@@ -1,6 +1,6 @@
-FROM zaraki673/docker-supervisord:latest
+FROM ubuntu:15.10
 
-MAINTAINER Kevin Larsonneur klarsonneur@gmail.com
+MAINTAINER Kevin Larsonneur klarsonneur@gmail.com  # MAINTAINER source : Pepe Barbe <dev@antropoide.net>
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -16,7 +16,7 @@ ADD files/run_transmission.sh /run_transmission.sh
 RUN chmod +x /run_transmission.sh && chown -R debian-transmission: /var/lib/transmission-daemon && \
     chown -R debian-transmission: /etc/transmission-daemon    
 
-VOLUME ["/var/lib/transmission-daemon/downloads"]
+VOLUME ["/etc/transmission-daemon","/var/lib/transmission-daemon/downloads","/var/lib/transmission-daemon/incomplete"]
 
 EXPOSE 9091
 EXPOSE 12345

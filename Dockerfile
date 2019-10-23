@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:19.04
 
 MAINTAINER Kevin Larsonneur klarsonneur@gmail.com  # MAINTAINER source : Pepe Barbe <dev@antropoide.net>
 
@@ -19,7 +19,8 @@ RUN chmod +x /run_transmission.sh && chown -R debian-transmission: /var/lib/tran
 VOLUME ["/etc/transmission-daemon","/var/lib/transmission-daemon/downloads","/var/lib/transmission-daemon/incomplete"]
 
 EXPOSE 9091
-EXPOSE 12345
+EXPOSE 12345/TCP
+EXPOSE 12345/UDP
 
 USER debian-transmission
 

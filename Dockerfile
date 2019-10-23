@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:18.04
 
 MAINTAINER Kevin Larsonneur klarsonneur@gmail.com  # MAINTAINER source : Pepe Barbe <dev@antropoide.net>
 
